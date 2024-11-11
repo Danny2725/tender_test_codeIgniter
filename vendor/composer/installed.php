@@ -3,7 +3,7 @@
         'name' => 'codeigniter4/appstarter',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'dc42bb19e75222c85a6ceeadfe3819a900ec619a',
+        'reference' => 'f570f6e98ab69b354d26d93870e20137e23367cd',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'codeigniter4/appstarter' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'dc42bb19e75222c85a6ceeadfe3819a900ec619a',
+            'reference' => 'f570f6e98ab69b354d26d93870e20137e23367cd',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -36,15 +36,6 @@
             'install_path' => __DIR__ . '/../fakerphp/faker',
             'aliases' => array(),
             'dev_requirement' => true,
-        ),
-        'firebase/php-jwt' => array(
-            'pretty_version' => 'v6.10.1',
-            'version' => '6.10.1.0',
-            'reference' => '500501c2ce893c824c801da135d02661199f60c5',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../firebase/php-jwt',
-            'aliases' => array(),
-            'dev_requirement' => false,
         ),
         'laminas/laminas-escaper' => array(
             'pretty_version' => '2.14.0',

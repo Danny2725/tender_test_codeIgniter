@@ -29,7 +29,6 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         ),
         'F' => 
         array (
-            'Firebase\\JWT\\' => 13,
             'Faker\\' => 6,
         ),
         'D' => 
@@ -68,10 +67,6 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-escaper/src',
         ),
-        'Firebase\\JWT\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
-        ),
         'Faker\\' => 
         array (
             0 => __DIR__ . '/..' . '/fakerphp/faker/src/Faker',
@@ -105,8 +100,13 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
     );
 
     public static $classMap = array (
+        'App\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Controllers/AuthController.php',
         'App\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/Controllers/BaseController.php',
-        'App\\Controllers\\Home' => __DIR__ . '/../..' . '/app/Controllers/Home.php',
+        'App\\Controllers\\TenderController' => __DIR__ . '/../..' . '/app/Controllers/TenderController.php',
+        'App\\Filters\\AuthMiddleware' => __DIR__ . '/../..' . '/app/Filters/AuthMiddleware.php',
+        'App\\Models\\InviteModel' => __DIR__ . '/../..' . '/app/Models/InviteModel.php',
+        'App\\Models\\TenderModel' => __DIR__ . '/../..' . '/app/Models/TenderModel.php',
+        'App\\Models\\UserModel' => __DIR__ . '/../..' . '/app/Models/UserModel.php',
         'CodeIgniter\\API\\ResponseTrait' => __DIR__ . '/..' . '/codeigniter4/framework/system/API/ResponseTrait.php',
         'CodeIgniter\\Autoloader\\Autoloader' => __DIR__ . '/..' . '/codeigniter4/framework/system/Autoloader/Autoloader.php',
         'CodeIgniter\\Autoloader\\FileLocator' => __DIR__ . '/..' . '/codeigniter4/framework/system/Autoloader/FileLocator.php',
@@ -522,6 +522,7 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'Config\\Generators' => __DIR__ . '/../..' . '/app/Config/Generators.php',
         'Config\\Honeypot' => __DIR__ . '/../..' . '/app/Config/Honeypot.php',
         'Config\\Images' => __DIR__ . '/../..' . '/app/Config/Images.php',
+        'Config\\JWT' => __DIR__ . '/../..' . '/app/Config/JWT.php',
         'Config\\Kint' => __DIR__ . '/../..' . '/app/Config/Kint.php',
         'Config\\Logger' => __DIR__ . '/../..' . '/app/Config/Logger.php',
         'Config\\Migrations' => __DIR__ . '/../..' . '/app/Config/Migrations.php',
@@ -1071,14 +1072,6 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'Faker\\Provider\\zh_TW\\Text' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/zh_TW/Text.php',
         'Faker\\UniqueGenerator' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/UniqueGenerator.php',
         'Faker\\ValidGenerator' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/ValidGenerator.php',
-        'Firebase\\JWT\\BeforeValidException' => __DIR__ . '/..' . '/firebase/php-jwt/src/BeforeValidException.php',
-        'Firebase\\JWT\\CachedKeySet' => __DIR__ . '/..' . '/firebase/php-jwt/src/CachedKeySet.php',
-        'Firebase\\JWT\\ExpiredException' => __DIR__ . '/..' . '/firebase/php-jwt/src/ExpiredException.php',
-        'Firebase\\JWT\\JWK' => __DIR__ . '/..' . '/firebase/php-jwt/src/JWK.php',
-        'Firebase\\JWT\\JWT' => __DIR__ . '/..' . '/firebase/php-jwt/src/JWT.php',
-        'Firebase\\JWT\\JWTExceptionWithPayloadInterface' => __DIR__ . '/..' . '/firebase/php-jwt/src/JWTExceptionWithPayloadInterface.php',
-        'Firebase\\JWT\\Key' => __DIR__ . '/..' . '/firebase/php-jwt/src/Key.php',
-        'Firebase\\JWT\\SignatureInvalidException' => __DIR__ . '/..' . '/firebase/php-jwt/src/SignatureInvalidException.php',
         'Laminas\\Escaper\\Escaper' => __DIR__ . '/..' . '/laminas/laminas-escaper/src/Escaper.php',
         'Laminas\\Escaper\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/laminas/laminas-escaper/src/Exception/ExceptionInterface.php',
         'Laminas\\Escaper\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/laminas/laminas-escaper/src/Exception/InvalidArgumentException.php',
