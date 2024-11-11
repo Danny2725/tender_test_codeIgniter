@@ -41,8 +41,6 @@ $RECYCLE.BIN/
 #-------------------------
 # These should never be under version control,
 # as it poses a security risk.
-.vagrant
-Vagrantfile
 
 #-------------------------
 # Temporary Files
@@ -113,10 +111,6 @@ nb-configuration.xml
 *.tmPreferences.cache
 *.stTheme.cache
 *.sublime-workspace
-*.sublime-project
-.phpintel
-/api/
-docker/docker/*
 
 # Visual Studio Code
 .vscode/
