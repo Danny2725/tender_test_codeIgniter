@@ -1,0 +1,54 @@
+version: '3'
+services:
+    web:
+        image: tiennm/nginx_dev_ci:0.0.1
+        ports:
+            - "80:80"
+        volumes:
+            - ../:/app
+        links:
+            - php
+    php:
+        build:
+            context: .
+            dockerfile: PHP.Dockerfile
+        platform: linux/arm64/v8
+        volumes:
+            - ../:/app
+        links:
+            - db
+            - composer
+
+    db:
+        image: mariadb:latest
+        environment:
+            MYSQL_USER: 'minical'
+            MYSQL_PASSWORD: 'MiniCalPwd'
+            # ensure the password matches the DATABASE_PASS above
+            MYSQL_ROOT_PASSWORD: 'MiniCalPwd'
+            # ensure the name matches the DATABASE_NAME above
+            MYSQL_DATABASE: 'minical'
+        volumes:
+            - ./docker/mysql/data/:/var/lib/mysql
+        ports:
+            - 3306:3306
+
+    composer:
+        image: composer:latest
+        platform: linux/arm64/v8
+          #restart: always
+        command: ["composer", "install"]
+        volumes:
+            - ..:/app
+
+#    phpmyadmin:
+#        image: phpmyadmin/phpmyadmin
+#        ports:
+#            - '8888:80'
+#        environment:
+#            PMA_HOST: db
+#        depends_on:
+#            - db
+volumes:
+    certbot-etc:
+    mysqldata: {}
